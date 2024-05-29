@@ -150,6 +150,6 @@ if __name__ == '__main__':
                             help='initial weights path')
         parser.add_argument('--freeze-layers', type=bool, default=False)
         parser.add_argument('--device', default='cuda:1', help='device id (i.e. 0 or 0,1 or cpu)')
-        early_stopping = EarlyStopping(30, verbose=True)
+        early_stopping = EarlyStopping(15, verbose=True)
         opt = parser.parse_args()
         main(opt, indexForIter)
